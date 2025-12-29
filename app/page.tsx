@@ -31,6 +31,7 @@ export default function Home() {
 
     return (
         <main className="max-w-3xl mx-auto px-6 py-20">
+        <h1 className="sr-only">Wodah Burner: Secure, Self-Destructing Encrypted Secret Sharing</h1>
         <div className="flex flex-col gap-6">
         <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white">Share a secret.</h1>
         <p className="text-gray-600 dark:text-neutral-400">Encrypted in your browser. Burned after one read.</p>
