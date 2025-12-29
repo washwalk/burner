@@ -11,10 +11,10 @@ export default function Footer() {
         <ShieldCheck className="w-4 h-4 text-emerald-500" />
         Zero Knowledge
         </h3>
-        <p className="text-sm text-gray-500 dark:text-neutral-500 leading-relaxed">
-        Wodah Burner is built on the principle that privacy shouldn't be a feature.
-        Data is encrypted in your browser and we never see your keys.
-        </p>
+         <p className="text-sm text-gray-500 dark:text-neutral-500 leading-relaxed">
+         Wodah Burner is built on the principle that privacy shouldn't be a feature.
+         Zero-Knowledge Architecture: Your decryption key never leaves your device. We physically cannot read your data even if we were forced to.
+         </p>
         </div>
 
         {/* Column 2: Tech Info */}

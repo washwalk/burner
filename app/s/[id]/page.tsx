@@ -41,7 +41,7 @@ export default function ReadPage({ params }: { params: { id: string } }) {
         ) : (
             <div className="text-left space-y-4 animate-in zoom-in-95 duration-300">
             <div className="flex justify-between items-center">
-            <span className="text-xs text-red-500 font-bold uppercase tracking-widest italic">Burned / Deleted from Server</span>
+            <span className="text-xs text-red-500 font-bold uppercase tracking-widest italic">This secret has been destroyed.</span>
             </div>
             <pre className="p-6 bg-white dark:bg-neutral-900 border border-gray-300 dark:border-neutral-800 rounded-xl overflow-x-auto font-mono text-emerald-400">
             {secret}

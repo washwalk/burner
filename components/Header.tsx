@@ -21,7 +21,7 @@ export default function Header() {
         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
         <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-tight">
-        E2EE Active
+        End-to-End Encrypted (AES-256-GCM)
         </span>
         </div>
         </div>

@@ -1,55 +1,33 @@
 import type { Metadata } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
 
 export const metadata: Metadata = {
   title: "Wodah Burner | End-to-End Encrypted Secret Sharing",
-  description: "Share sensitive passwords and snippets with zero-knowledge, client-side encryption. Links self-destruct after being read.",
-  keywords: ["secure link", "self-destructing message", "share password safely", "encrypted pastebin", "zero-knowledge sharing"],
-  openGraph: {
-    title: "Wodah Burner",
-    description: "Secure, ephemeral link sharing.",
-    url: "https://burner.wodah.com",
-    siteName: "Wodah",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Wodah Burner",
-    description: "Zero-knowledge encrypted secret sharing.",
-  },
+  description: "Share sensitive passwords and snippets with zero-knowledge, client-side encryption.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-black dark:bg-black dark:text-white flex flex-col">
+    <html lang="en" className="dark">
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans min-h-screen bg-[#0a0a0a] text-neutral-200 flex flex-col selection:bg-emerald-500/30`}>
+        <div className="fixed inset-0 z-[-1] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none" />
+        
         <Header />
         {children}
         <Footer />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": "Wodah Burner",
-              "operatingSystem": "All",
-              "applicationCategory": "SecurityApplication",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-              },
-              "description": "Zero-knowledge encrypted secret sharing tool."
-            })
-          }}
-        />
       </body>
     </html>
   );
